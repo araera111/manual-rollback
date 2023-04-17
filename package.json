@@ -1,0 +1,65 @@
+{
+  "name": "manual-rollback",
+  "version": "1.0.5",
+  "description": "",
+  "source": "src/main.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "bin": {
+    "rollback": "./dist/main.js"
+  },
+  "scripts": {
+    "dev": "tsx ./src/main.ts",
+    "start": "cross-env NODE_ENV=production node ./dist/main.js",
+    "build": "zx ./build.mjs && zx ./addShebang.mjs",
+    "lint-fix": "eslint --cache --fix src/ && prettier --write src/",
+    "test": "jest",
+    "type": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@swc/core": "^1.3.50",
+    "@swc/jest": "^0.2.26",
+    "@types/eslint": "^8.37.0",
+    "@types/fs-extra": "^11.0.1",
+    "@types/inquirer": "^9.0.3",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "@types/prettier": "^2.7.2",
+    "@types/rimraf": "^3.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "cross-env": "^7.0.3",
+    "crossenv": "^0.0.2-security",
+    "esbuild": "^0.17.16",
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-base-typescript": "^1.1.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.1",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.7",
+    "rimraf": "^5.0.0",
+    "tsc": "^2.0.4",
+    "tsx": "^3.12.6",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@mobily/ts-belt": "^4.0.0-rc.5",
+    "commander": "^10.0.1",
+    "date-fns": "^2.29.3",
+    "fast-toml": "^0.5.4",
+    "fs-extra": "^11.1.1",
+    "immer": "^9.0.21",
+    "inquirer": "^9.1.5",
+    "toml": "^3.0.0",
+    "zod": "^3.21.4"
+  },
+  "volta": {
+    "node": "18.14.1"
+  }
+}

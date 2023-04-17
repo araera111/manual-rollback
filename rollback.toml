@@ -1,0 +1,11 @@
+saveDirPath = "./save"
+
+[[sources]]
+name = "front"
+src = ""
+dest = ""
+
+[[sources]]
+name = "back"
+src = ""
+dest = ""
